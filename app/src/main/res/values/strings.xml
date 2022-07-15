@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BGRem</string>
+    <string name="splash_title">BgRem</string>
+    <string name="splash_text">Удалить фон</string>
+    <string name="splash_logo_description">логотип</string>
+    <string name="splash_image_description">фото</string>
+    <string name="pick_photo">Выбрать фото</string>
+    <string name="take_photo">Сделать фото</string>
+    <string name="remove_photo">Удалить фото</string>
+    <string name="photo">Выбранное фото</string>
+    <string name="pick_video">Выбрать видео</string>
+    <string name="pick_video_description">Выбрать видео</string>
+    <string name="no_network">Нет сети!</string>
+    <string name="unknown_exception">Неизвестная ошибка</string>
+    <string name="permissions_needed_title">Приложению нужно разрешение</string>
+    <string name="permissions_needed_message">Нужны следующие разрешения:</string>
+    <string name="everything_fine">OK</string>
+    <string name="grant_storage_permissions_dialog_message">Нужен доступ к файлам!</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="remove_video">Удалить видео</string>
+</resources>

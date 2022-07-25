@@ -2,16 +2,16 @@ package com.bgrem.presentation.viewmodel
 
 import androidx.lifecycle.*
 import com.bgrem.data.dto.Video
+import com.bgrem.data.repositoryImpl.VideoRepositoryImpl
 import com.bgrem.domain.repository.VideoRepository
 import com.bgrem.domain.model.ModelState
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.File
-import javax.inject.Inject
 
-@HiltViewModel
-class VideoViewModel @Inject constructor(private val repository: VideoRepository) : ViewModel() {
+class VideoViewModel () : ViewModel() {
+
+    private val repository: VideoRepository = VideoRepositoryImpl()
 
     var data: LiveData<Video> = repository.data.asLiveData(Dispatchers.Default)
 

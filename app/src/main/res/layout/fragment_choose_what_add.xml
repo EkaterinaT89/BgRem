@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.ChooseWhatAddFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/choose_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/choose_video_button"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:contentDescription="@string/choose_video_button"
+            android:text="@string/video"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="180dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/ic_outline_video_library_24"
+            app:iconGravity="textStart" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/choose_photo_button"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="60dp"
+            android:contentDescription="@string/choose_photo_button"
+            android:text="@string/choose_photo_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="100dp"
+            android:layout_gravity="center"
+            app:icon="@drawable/ic_outline_add_a_photo_24"
+            app:iconGravity="textStart" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@ package com.bgrem.data.repositoryImpl
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asFlow
-import com.bgrem.data.api.ApiService
+import com.bgrem.data.api.Api
 import com.bgrem.data.dto.Video
 import com.bgrem.domain.errors.ApiException
 import com.bgrem.domain.errors.NetWorkException
@@ -13,11 +13,8 @@ import kotlinx.coroutines.flow.flowOn
 import okhttp3.MultipartBody
 import java.io.File
 import java.io.IOException
-import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
-class VideoRepositoryImpl @Inject constructor(private val apiService: ApiService) :
+class VideoRepositoryImpl () :
     VideoRepository {
 
     private val _videoData = MutableLiveData<Video>()
@@ -28,7 +25,7 @@ class VideoRepositoryImpl @Inject constructor(private val apiService: ApiService
 
     override suspend fun createJob() {
         try {
-            val response = apiService.createJob()
+            val response = Api.retrofitService.createJob()
             val job =
                 response.body() ?: throw ApiException(response.code(), response.message())
             videoData.value = job
@@ -45,7 +42,7 @@ class VideoRepositoryImpl @Inject constructor(private val apiService: ApiService
             val media = MultipartBody.Part.createFormData(
                 "file", video.toString()
             )
-            val response = apiService.getJob(media, id)
+            val response = Api.retrofitService.getJob(media, id)
             val job =
                 response.body() ?: throw ApiException(response.code(), response.message())
             videoData.value = job
@@ -59,7 +56,7 @@ class VideoRepositoryImpl @Inject constructor(private val apiService: ApiService
 
     override suspend fun getBg() {
         try {
-            val response = apiService.getBg()
+            val response = Api.retrofitService.getBg()
             val bg =
                 response.body() ?: throw ApiException(response.code(), response.message())
             videoData.value = bg

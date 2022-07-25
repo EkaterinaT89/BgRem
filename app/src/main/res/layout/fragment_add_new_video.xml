@@ -46,7 +46,7 @@
         android:id="@+id/button_panel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="@dimen/margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +62,15 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:cornerRadius="20dp"
             app:icon="@drawable/ic_outline_video_library_24" />
+
+        <EditText
+            android:id="@+id/video_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="@string/input_title"
+            android:inputType="text"
+            android:minHeight="48dp" />
 
     </LinearLayout>
 

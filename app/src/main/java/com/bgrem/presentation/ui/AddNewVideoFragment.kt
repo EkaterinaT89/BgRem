@@ -18,10 +18,8 @@ import com.bgrem.domain.utils.PermissionsManager
 import com.bgrem.presentation.viewmodel.VideoViewModel
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.material.snackbar.Snackbar
-import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 
-@AndroidEntryPoint
 class AddNewVideoFragment: Fragment() {
 
     private var mediaPlayer: ExoPlayer? = null
@@ -102,6 +100,8 @@ class AddNewVideoFragment: Fragment() {
                 viewModel.getBg()
 
             }
+
+            videoNameInput.requestFocus()
         }
 
         return binding.root

@@ -18,4 +18,8 @@
     <string name="grant_storage_permissions_dialog_message">Нужен доступ к файлам!</string>
     <string name="action_cancel">Cancel</string>
     <string name="remove_video">Удалить видео</string>
+    <string name="choose_video_button">Добавить видео</string>
+    <string name="video">ВИДЕО</string>
+    <string name="choose_photo_button">ФОТО</string>
+    <string name="input_title">Введите название</string>
 </resources>
